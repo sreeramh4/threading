@@ -38,5 +38,10 @@ def main():
     
     print new_thread.is_alive() #returns True/ False whether new_thread is alive or not
     
+    raw_input( "Just executing something here to see if that terminates \
+    the other thread. Try pressing enter to run is_alive() again.")
+    print new_thread.is_alive()
+
+    
 if ( __name__=="__main__"):
     main()
