@@ -25,8 +25,7 @@ def main():
     #creating a new thread object
     new_thread = threading.Thread (target=do_this)
     #target() : specifies what to execute on making the object
-    new_thread.start() # Executes new_thread.run
-    #Runs the new_thread object we made
+    new_thread.start() # Executes new_thread.run which runs the new_thread object we made
     
     print "This is the first thread."
     
@@ -36,6 +35,8 @@ def main():
     
     raw_input ("Hit enter to die!")
     dead = True     #Updates dead to True GLOBALLY.
+    
+    print new_thread.is_alive() #returns True/ False whether new_thread is alive or not
     
 if ( __name__=="__main__"):
     main()
