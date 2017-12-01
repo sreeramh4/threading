@@ -20,11 +20,10 @@ def do_this():
 def main():
     
     global dead     #Creating a flag of sorts to exit the infinite loop
-    
     dead = False    #Making the initial value False , so the other thread won't go into infinite loop initially.
     
     #creating a new thread object
-    new_thread = threading.Thread (target=do_this)
+    new_thread = threading.Thread (target=do_this, name = "secondo")
     #target() : specifies what to execute on making the object
     new_thread.start() # Executes new_thread.run which runs the new_thread object we made
     
@@ -44,9 +43,6 @@ def main():
     print new_thread.is_alive()
     print threading.active_count()
     print threading.enumerate()
-    
-if ( __name__=="__main__"):
 
-    
 if ( __name__=="__main__"):
     main()
