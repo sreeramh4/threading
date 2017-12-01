@@ -14,6 +14,7 @@ def do_this():
     while( not dead):
         x += 1
         pass    #Infinite loop, Infinitely does nothing.
+    print "\n Greetings from thread 2!"
     print x
     
 def main():
@@ -41,6 +42,10 @@ def main():
     raw_input( "Just executing something here to see if that terminates \
     the other thread. Try pressing enter to run is_alive() again.")
     print new_thread.is_alive()
+    print threading.active_count()
+    print threading.enumerate()
+    
+if ( __name__=="__main__"):
 
     
 if ( __name__=="__main__"):
