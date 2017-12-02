@@ -5,14 +5,14 @@ import threading
 def do_this():
 
 	global x
-	print "This is the second thread"
+	print "This is the second thread's counter"
 	while( x<300):
 		x +=1
 	print x
 
 def do_after():
 	global x
-	print "This is the third thread"
+	print "This is the third thread's counter"
 	while (x< 600):
 		x += 1
 	print x
