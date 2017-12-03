@@ -26,7 +26,7 @@ def main():
 	thread_duo = threading.Thread( target= do_this, name= "alt1" )
 	thread_duo.start()
 	thread_duo.join #Would ensure that the next thread is executed only after this threads done.
-
+	print thread_duo.ident # Thread Identification number. Kinda long. Gibberish. But ID's your thread pretty well.
 	thread_trio = threading.Thread( target= do_after, name= "alt2" )
 	thread_trio.start()
 
